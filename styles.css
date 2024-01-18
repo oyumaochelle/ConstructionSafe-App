@@ -1,0 +1,111 @@
+
+* {
+    /* This property sets the box-sizing model for all elements. */
+    /* The border-box value makes the width and height properties include the padding and border. */
+    box-sizing: border-box;
+  }
+  
+  /* This is an element selector. It applies to all <h1> elements in the HTML page. */
+  h1 {
+    /* This property sets the color of the text. */
+    color: orange;
+    /* This property sets the alignment of the text. */
+    text-align: center;
+  }
+  
+  /* This is an id selector. It applies to the element with the id attribute of "weather". */
+  #weather {
+    /* This property sets the background color of the element. */
+    background-color: lightblue;
+    /* This property sets the width of the element. */
+    width: 80%;
+    /* This property sets the margin of the element. */
+    /* The auto value centers the element horizontally. */
+    margin: 20px auto;
+    /* This property sets the padding of the element. */
+    padding: 10px;
+    /* This property sets the border of the element. */
+    border: 2px solid blue;
+    /* This property sets the border radius of the element. */
+    /* This creates rounded corners. */
+    border-radius: 10px;
+  }
+  
+  /* This is a class selector. It applies to all elements with the class attribute of "card". */
+  .card {
+    /* This property sets the box shadow of the element. */
+    /* This creates a shadow effect. */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* This is a descendant selector. It applies to all <p> elements that are inside <div> elements with the class attribute of "card-body". */
+  .card-body p {
+    /* This property sets the font size of the text. */
+    font-size: 18px;
+  }
+  
+  /* This is a pseudo-class selector. It applies to the <div> elements with the class attribute of "card" when the mouse pointer is over them. */
+  .card:hover {
+    /* This property sets the box shadow of the element. */
+    /* This creates a stronger shadow effect. */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  /* This is a pseudo-element selector. It applies to the first letter of the <p> elements that are inside <div> elements with the class attribute of "card-body". */
+  .card-body p::first-letter {
+    /* This property sets the font weight of the text. */
+    font-weight: bold;
+    /* This property sets the color of the text. */
+    color: red;
+  }
+  /* Add this content to styles.css */
+
+/* Feedback Form Styles */
+#feedback {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#feedbackForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 600px) {
+  #feedbackForm {
+      width: 100%;
+  }
+}

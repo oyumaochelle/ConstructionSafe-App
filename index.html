@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstructionSafe Toolbox Talk Suite</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>ConstructionSafe Toolbox Talk Suite</h1>
+    </header>
+
+    <main class="container my-4">
+        <section id="weather" class="mb-4">
+            <h2>Today's Weather</h2>
+            <div id="weather-info" class="d-flex align-items-center">
+                <p>Loading weather...</p>
+            </div>
+            <div id="time-info" class="d-flex align-items-right">
+            </div>
+        </section>
+        <section id="toolbox-talk" class="mb-4">
+            <h2>Toolbox Talk</h2>
+            <p>Manage and conduct safety meetings with real-time collaboration features.</p>
+            <!-- Include other toolbox talk features as needed -->
+        </section>
+
+        <!-- Update this section in the #participants section in index.html -->
+        <section id="participants" class="mb-4">
+            <h2>Participants</h2>
+            <form id="participant-form">
+                <label for="participantName">Participant Name:</label>
+                <input type="text" id="participantName" name="participantName" required>
+
+                <label for="participantDepartment">Participant Department:</label>
+                <select id="participantDepartment" name="participantDepartment" required>
+                    <option value="" disabled selected>Select Department</option>
+                    <option value="Civil Department">Civil Department</option>
+                    <option value="Electrical Department">Electrical Department</option>
+                    <option value="Masonry Department">Masonry Department</option>
+                    <option value="Plumbing and Pipe Fitting Department">Plumbing and Pipe Fitting Department</option>
+                    <option value="Store-keeping Department">Store-keeping Department</option>
+                </select>
+
+        <button type="button" onclick="addParticipant()">Add Participant</button>
+    </form>
+    <ul id="participantList"></ul>
+</section>
+        <!-- Bootstrap card for topics -->
+        <section id="topics">
+            <h2>Topics</h2>
+
+            <!-- Row 1 -->
+            <div class="row">
+                <!-- Topic 1 -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Monday: Falls Protection
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">content for Topic 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Tuesday: Electrical Safety
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">content for Topic 2.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+                <!-- Topic 3 -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Wednesday: Material Safety
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">content for Topic 3.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Thursday: Manual handling
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">content for Topic 4.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Row 3 -->
+            <d class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Friday: House-Keeping
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">content for this Topic 5.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="feedback" class="mb-4">
+            <h2>Participant Feedback</h2>
+            <form id="feedbackForm">
+                <label for="participantNameFeedback">Participant's Identifier:</label>
+                <input type="text" id="participantNameFeedback" name="participantNameFeedback" placeholder="e.g., Participant 1" required>
+        
+                <label for="feedbackText">Feedback:</label>
+                <textarea id="feedbackText" name="feedbackText" rows="4" required></textarea>
+        
+                <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
