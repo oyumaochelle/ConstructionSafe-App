@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const weatherInfo = document.getElementById('weather-info');
     const timeInfo = document.getElementById('time-info');
 
-    //function that update time
+    //function that updates time
     function updateTime() {
         const now = new Date();
         const hours = now.getHours();
@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const formattedTime = `${hours}:${minutes}:${seconds}`;
         timeInfo.textContent = `Current Time: ${formattedTime}`;
     }
+
+    // Update time immediately
     updateTime();
 
     // Set interval to update time every second
     setInterval(updateTime, 1000);
-
     const weatherApiKey = 'f86e4dfbadfb37e9c2121bbefa5ea026';
     const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Nairobi,ke&appid=${weatherApiKey}&units=metric`;
 
@@ -69,40 +70,6 @@ function handleFormSubmission(event) {
 const participantForm = document.getElementById('participant-form');
 participantForm.addEventListener('submit', handleFormSubmission);
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Existing code...
-    
-        const topicsContainer = document.getElementById('topicContainer');
-    
-        // Replace dummy topics with actual health and safety topics
-        const healthAndSafetyTopics = [
-            { title: 'Fall Protection', description: 'Notes on using fall protection equipment.' },
-            { title: 'Electrical Safety', description: 'Guidelines for working with electrical equipment.' },
-            // Add more topics as needed
-        ];
-    
-        // Function to create topic cards
-        function createTopicCard(topic) {
-            const card = document.createElement('div');
-            card.classList.add('col-md-6');
-            card.innerHTML = `
-                <div class="card mb-3">
-                    <div class="card-header">
-                        ${topic.title}
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">${topic.description}</p>
-                    </div>
-                </div>
-            `;
-            return card;
-        }
-    
-        // Populate topicsContainer with dynamic topics
-        healthAndSafetyTopics.forEach(topic => {
-            topicsContainer.appendChild(createTopicCard(topic));
-        });
-    });
 // submit function 
 function submitFeedback() {
     const participantNameInput = document.getElementById('participantNameFeedback');
@@ -120,6 +87,15 @@ function submitFeedback() {
         feedbackTextInput.value = "";
     }
 }
+//event listeners for the topics
+document.getElementById('title').addEventListener('click', function(){
+    var content = document.getElementById('content');
+    if (content.style.display ==="none"){
+        content.style.display = 'block';
+    }else {
+        content.style.display ='none';
+    }
+})
 
 // Attach event listener to the feedback form
 const feedbackForm = document.getElementById('feedbackForm');
