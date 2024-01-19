@@ -96,6 +96,14 @@ document.getElementById('title').addEventListener('click', function(){
         content.style.display ='none';
     }
 })
+document.getElementById('title2').addEventListener('click', function(){
+    var content = document.getElementById('content2');
+    if (content.style.display ==='none'){
+        content.style.diplay ='block';
+    } else {
+        content.style.display = 'none';
+    }
+})
 
 // Attach event listener to the feedback form
 const feedbackForm = document.getElementById('feedbackForm');
