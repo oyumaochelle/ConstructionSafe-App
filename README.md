@@ -8,8 +8,8 @@ Setup
 Usage
 Technologies Used
 File Structure
-Contributing
-License
+
+Project Mangement Plan: https://trello.com/b/NpZgMzQH/constructionsafe-suite
 Introduction
 Welcome to ConstructionSafe Toolbox Talk Suite! This web application aims to streamline the creation, conduct, and documentation of toolbox talks in the construction industry. The application provides a user-friendly interface for managing and conducting safety meetings, with real-time collaboration features, weather updates, and seamless integration with APIs.
 
