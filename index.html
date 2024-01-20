@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script src="globalFunctions.js"></script>
 
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
+    <header class="text-white text-center py-3 mg-10">
         <h1>ConstructionSafe Toolbox Talk Suite</h1>
     </header>
 
@@ -26,7 +27,9 @@
         </section>
         <section id="toolbox-talk" class="mb-4">
             <h2>Toolbox Talk</h2>
-            <p>Manage and conduct safety meetings with real-time collaboration features.</p>
+            <p><b><i>IMPORTANT:</i></b>Ensure this toolbox is used anytime a new work station or construction site is established and that the workers are to be deployed. 
+                In short, use the below materials to enlighten the workers before they embark on their work!. <b>ALSO</b>, ensure that their names and departments are taken for further analysis. 
+                <b>Ensure that any feedback from the participants are accurately scribed!</b></p>
             <!-- Include other toolbox talk features as needed -->
         </section>
 
@@ -59,13 +62,11 @@
             <div class="row">
                 <!-- Topic 1 -->
                 <div class="col-md-6">
-                    <div class="card mb-4">
+                    <div class="card text-bg-primary mb-3" style="max-width: 50rem;">
                         <div class="card-header">
-                            Monday: Falls Protection
+                            <h2 id="title" class="card-text">Monday: Falls Protection</h2>
                         </div>
-                        <div class="card-body">
-                            <p id="title" card-text">content for Topic 1.</p>
-                        </div>
+                        <div class="card-body"></div>
                         <div id="content" class="content" style="display: block;">
                             <ol>
                                 <li>
@@ -99,28 +100,31 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-header">
-                            Tuesday: Electrical Safety
+                            <h2 id="title2"class="card-text">Tuesday: Electrical Safety</h2>
                         </div>
                         <div class="card-body">
-                            <p id="title2" class="card-text">content for Topic 2.</p>
                         </div>
-                        <div id="content2" class="content2" style="display: block;">
+                        <div id="content2" class="content2"">
                             <ol>
                                 <li>
-                                    <b>Risk of Electrocution:</b> Electrical safety is crucial to prevent the risk of electrocution, 
-                                    a potentially fatal hazard in construction sites.
+                                    <b>Prevention of Electrocution: </b> Electrical safety in a construction site is paramount 
+                                    to prevent the risk of electrocution, a potentially fatal hazard. Proper measures, such as insulation, 
+                                    grounding, and use of personal protective equipment, help safeguard workers from electrical shocks.
                                 </li>
                                 <li>
-                                    <b>Fire Prevention: </b>Adhering to electrical safety protocols helps prevent electrical fires, 
-                                    safeguarding both workers and property.
+                                    <b>Fire Hazard Mitigation: </b>Equipment Longevity: Proper electrical safety measures contribute to 
+                                    the longevity and reliability of electrical equipment. This reduces the likelihood of malfunctions, 
+                                    breakdowns, and unexpected downtime, ensuring the smooth operation of construction activities.
                                 </li>
                                 <li>
-                                    <b>Code Compliance: </b>  Following electrical safety codes and standards is essential to 
-                                    ensure compliance with regulations and avoid legal issues.
+                                    <b>Equipment Longevity: </b> Proper electrical safety measures contribute to the longevity 
+                                    and reliability of electrical equipment. This reduces the likelihood of malfunctions, breakdowns, and unexpected 
+                                    downtime, ensuring the smooth operation of construction activities.
                                 </li>
                                 <li>
-                                    <b>Equipment Protection: </b> Proper electrical safety measures extend the lifespan of 
-                                    electrical equipment, reducing the likelihood of malfunctions and unexpected downtime.
+                                    <b>Worker Training and Awareness: </b> Electrical safety involves educating workers on potential 
+                                    hazards and safe practices. Training programs and awareness campaigns enhance the knowledge of workers, empowering them 
+                                    to identify and address electrical risks, fostering a safer work environment.
                                 </li>
                             </ol>
                         </div>
@@ -134,10 +138,34 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-header">
-                            Wednesday: Material Safety
+                            <h2 id="title3" class="card-text">Wednesday: Material Safety</h2>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">content for Topic 3.</p>
+                        </div>
+                        <div id="content3" class="content3">
+                            <ol>
+                                <li>
+                                    <b>Environmental Responsibility: </b>Material safety practices in construction 
+                                    contribute to environmental responsibility by minimizing the impact of construction 
+                                    activities on ecosystems. Proper disposal and handling of materials help prevent soil, 
+                                    air, and water pollution, aligning with sustainable and eco-friendly construction practices.
+                                </li>
+                                <li><b>Long-Term Equipment Durability: </b>Proper handling and storage of construction 
+                                    materials contribute to the longevity of equipment and tools. Ensuring that materials 
+                                    are used and stored correctly helps prevent wear and tear, reducing the risk of equipment 
+                                    failure during construction activities.
+                                </li>
+                                <li><b>Accident Prevention:</b> Material safety measures reduce the likelihood of 
+                                    accidents caused by mishandling or improper storage of construction materials. 
+                                    This helps create a safer work environment and minimizes the potential for accidents that 
+                                    could lead to injuries or property damage.
+                                </li>
+                                <li>
+                                    <b>Worker Protection: </b>Material safety in a construction site is crucial to protect workers 
+                                    from potential hazards associated with handling, storing, and using construction materials. 
+                                    This includes minimizing the risk of injuries, chemical exposures, and accidents.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -146,28 +174,103 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-header">
-                            Thursday: Manual handling
+                            <h2 id="title4" class="card-text">Thursday: Manual handling</h2>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">content for Topic 4.</p>
+                        </div>
+                        <div id="content4" class="content4">
+                            <ol>
+                                <li><b>Injury Prevention: </b>Manual handling safety in a construction site is essential to prevent 
+                                    injuries related to the lifting, carrying, and moving of heavy objects. Proper techniques and 
+                                    training reduce the risk of musculoskeletal disorders and other physical injuries among construction 
+                                    workers.
+                                </li>
+                                <li>
+                                    <b>Improved Efficiency: </b>Implementing manual handling safety procedures enhances work efficiency 
+                                    by ensuring that tasks involving the manual movement of materials are carried out effectively. 
+                                    Workers trained in proper lifting techniques can perform tasks more efficiently, reducing the 
+                                    likelihood of delays.
+                                </li>
+                                <li><b></b>Health and Well-being: Manual handling safety measures contribute to the overall health 
+                                    and well-being of construction workers. By minimizing the strain on the body during lifting and carrying, 
+                                    workers experience less fatigue, discomfort, and long-term physical stress, promoting a healthier workforce.
+                                </li>
+                                <li><b></b>Team Morale and Productivity: A focus on manual handling safety fosters a positive work environment. 
+                                    When workers feel supported through proper training and equipment, morale improves, leading to increased 
+                                    productivity and a more cohesive team dynamic on the construction site.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Row 3 -->
-            <d class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        Friday: House-Keeping
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h2 id="title5" class="card-text">Friday: PPEs</h2>
+                        </div>
+                        <div class="card-body">
+                        </div>
+                        <div id="content5" class="content5">
+                            <ol>
+                                <li>
+                                    <b>Worker Protection: </b>Personal Protective Equipment (PPE) in construction sites is crucial 
+                                    for safeguarding workers from various hazards, including falling objects, chemical exposure, and physical injuries.
+                                </li>
+                                <li>
+                                    <b>Legal Compliance: </b>The use of PPE is often mandated by safety regulations and standards. 
+                                    Adhering to these requirements ensures that construction sites comply with legal obligations, 
+                                    reducing the risk of penalties and legal consequences.
+                                </li>
+                                <li><b>Injury Prevention: </b>PPE, such as hard hats, safety glasses, 
+                                    gloves, and steel-toed boots, helps prevent injuries by creating a barrier between the worker 
+                                    and potential hazards, reducing the impact of accidents.
+                                </li>
+                                <li>
+                                    <b>Enhanced Productivity: </b>When workers feel secure and protected, 
+                                    their confidence and focus improve, contributing to increased productivity. PPE instills a 
+                                    sense of safety, allowing construction tasks to be performed with greater efficiency and precision.
+                                </li>
+                            </ol>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">content for this Topic 5.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h2 id="title6" class="card-text">Saturday: House-Keeping</h2>
+                        </div>
+                        <div class="card-body">
+                        </div>
+                        <div id="content6" class="content6">
+                            <ol>
+                                <li><b>Accident Prevention: </b>Housekeeping in a construction site is essential to prevent accidents 
+                                    caused by clutter, debris, or poorly maintained work areas. A clean and organized environment reduces 
+                                    tripping hazards and promotes overall safety for workers.
+                                </li>
+                                <li><b>Efficient Workflow: </b>Maintaining good housekeeping practices ensures a smooth and efficient workflow 
+                                    on the construction site. Clean and organized spaces allow workers to locate tools and materials easily, 
+                                    reducing downtime and improving productivity.
+                                </li>
+                                <li><b>Prevention of Slips and Falls: </b>Regular housekeeping helps prevent slips and falls by promptly addressing 
+                                    spills, removing obstacles, and keeping walking surfaces clear. This is crucial in construction areas where 
+                                    various materials and equipment are often present.
+                                </li>
+                                <li><b>Equipment Longevity: </b>Proper housekeeping contributes to the longevity of tools and equipment. 
+                                    Regular cleaning and maintenance prevent the buildup of dirt and debris, reducing wear and tear on 
+                                    machinery and ensuring that equipment remains in good working condition.
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </section>
         <section id="feedback" class="mb-4">
-            <h2>Participant Feedback</h2>
+            <h2>Participant's Feedback</h2>
             <form id="feedbackForm">
                 <label for="participantNameFeedback">Participant's Identifier:</label>
                 <input type="text" id="participantNameFeedback" name="participantNameFeedback" placeholder="e.g., Participant 1" required>

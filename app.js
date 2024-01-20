@@ -87,23 +87,38 @@ function submitFeedback() {
         feedbackTextInput.value = "";
     }
 }
-//event listeners for the topics
-document.getElementById('title').addEventListener('click', function(){
-    var content = document.getElementById('content');
-    if (content.style.display ==="none"){
+// Function to toggle content visibility
+function toggleContent(topicId) {
+    var content = document.getElementById(topicId);
+
+    if (content.style.display === "none" || content.style.display === "") {
         content.style.display = 'block';
-    }else {
-        content.style.display ='none';
-    }
-})
-document.getElementById('title2').addEventListener('click', function(){
-    var content = document.getElementById('content2');
-    if (content.style.display ==='none'){
-        content.style.diplay ='block';
     } else {
         content.style.display = 'none';
     }
+}
+
+// Event listeners for each topic
+document.getElementById('title').addEventListener('click', function () {
+    toggleContent('content');
+});
+
+document.getElementById('title2').addEventListener('click', function () {
+    toggleContent('content2');
+});
+document.getElementById('title3').addEventListener('click', function(){
+    toggleContent('content3');
 })
+document.getElementById('title4').addEventListener('click', function(){
+    toggleContent('content4');
+})
+document.getElementById('title5').addEventListener('click', function(){
+    toggleContent('content5');
+})
+document.getElementById('title6').addEventListener('click', function(){
+    toggleContent('content6');
+})
+
 
 // Attach event listener to the feedback form
 const feedbackForm = document.getElementById('feedbackForm');
