@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
             weatherInfo.innerHTML = '<p>Failed to fetch weather data.</p>';
         });
 });
-
 // Function to add participant
 function addParticipant() {
     const participantNameInput = document.getElementById('participantName');
@@ -58,12 +57,45 @@ function addParticipant() {
         participantNameInput.value = "";
         participantDepartmentSelect.value = "";
     }
+    sendParticipantDataToServer();
 }
 
 // Function to handle form submission
 function handleFormSubmission(event) {
     event.preventDefault();
     addParticipant();
+}
+function sendParticipantDataToServer() {
+    // Extract participant data from the form or the participant list
+    const participantNameInput = document.getElementById('participantName');
+    const participantDepartmentSelect = document.getElementById('participantDepartment');
+
+    const participantName = participantNameInput.value.trim();
+    const participantDepartment = participantDepartmentSelect.value.trim();
+
+    if (participantName !== "" && participantDepartment !== "") {
+        // Construct the data object to be sent to the server
+        const data = {
+            participantName: participantName,
+            participantDepartment: participantDepartment
+        };
+
+        // Send data to the server using fetch API
+        fetch('http://localhost:3000/participant_endpoint', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from server:', data);
+        })
+        .catch(error => {
+            console.error('Error sending participant data:', error);
+        });
+    }
 }
 
 // Attach event listener to the form
@@ -85,6 +117,38 @@ function submitFeedback() {
         // Clear input fields after submitting feedback
         participantNameInput.value = "";
         feedbackTextInput.value = "";
+    }
+}
+function sendFeedbackToServer() {
+    // Extract feedback data from the form
+    const participantNameInput = document.getElementById('participantNameFeedback');
+    const feedbackTextInput = document.getElementById('feedbackText');
+
+    const participantIdentifier = participantNameInput.value.trim();
+    const feedbackText = feedbackTextInput.value.trim();
+
+    if (participantIdentifier !== "" && feedbackText !== "") {
+        // Construct the data object to be sent to the server
+        const data = {
+            participantIdentifier: participantIdentifier,
+            feedbackText: feedbackText
+        };
+
+        // Send data to the server using fetch API
+        fetch('http://localhost:3000/feedback_endpoint', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from server:', data);
+        })
+        .catch(error => {
+            console.error('Error sending feedback data:', error);
+        });
     }
 }
 // Function to toggle content visibility
