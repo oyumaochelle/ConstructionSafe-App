@@ -53,9 +53,6 @@ Access the Application:
 
 Open your web browser and go to http://localhost:3000 to access the ConstructionSafe Toolbox Talk Suite.
 Usage
-User Registration:
-
-Sign up for an account to access the toolbox talk creation and collaboration features.
 Create Toolbox Talks:
 
 Use the application interface to create and manage toolbox talks.
